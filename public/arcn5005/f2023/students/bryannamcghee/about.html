@@ -1,28 +1,116 @@
-<style>
-  .vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-  }
-</style>
-<section
-  style="
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  "
->
-  <div className="flex items-center justify-center grow">
-    <img src="./photo.png" alt="Student" height="200" />
-  </div>
-  <div class="vl"></div>
-  <div className="flex items-center justify-center ">
-    <ul>
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
-      <li>four</li>
-    </ul>
-  </div>
-</section>
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        @keyframes pulse {
+            0% {
+                color: #FF6347;
+                text-shadow: 0 0 10px #FF6347;
+            }
+            50% {
+                color: #4169E1;
+                text-shadow: 0 0 10px #4169E1;
+            }
+            100% {
+                color: #FF6347;
+                text-shadow: 0 0 10px #FF6347;
+            }
+        }
+
+        @keyframes buttonPulse {
+            0% {
+                background-color: #4169E1;
+            }
+            50% {
+                background-color: #FF6347;
+            }
+            100% {
+                background-color: #4169E1;
+            }
+        }
+
+        @keyframes imagePulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            animation: pulse 2s linear infinite;
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4169E1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            text-decoration: none;
+            animation: buttonPulse 2s linear infinite;
+        }
+
+        .photo {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            animation: imagePulse 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+        <img class="photo" src="C:\Users\bryan\OneDrive\Desktop\processed-01CD9C3A-C6D8-4E45-9D2E-CA9FA5AF8E3B-A06D4A60-6204-4659-AF11-E317A34D23C7.jpeg" alt="Your Photo">
+        <p>Fact 1: From Winnipeg, MB</p>
+        <p>Fact 2: I enjoy hiking</p>
+        <p>Fact 3: Lover of spicy food</p>
+        <div class="button-container">
+            <a href="#" class="button">Assignment 1</a>
+            <a href="#" class="button">Asssigment 2</a>
+            <a href="#" class="button">Assignment 3</a>
+        </div>
+    </div>
+</body>
+</html>
